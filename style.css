@@ -16,6 +16,16 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    counter-reset: pontos;
+}
+
+.game::after {
+    content: counter(pontos) '/5';
+    font-size: 40px;
+    color: white;
+    right: 30px;
+    top: 20px;
+    position: absolute;
 }
 
 .inimigo {
@@ -54,6 +64,7 @@
 
 .moedas:checked {
     visibility: hidden;
+    counter-increment: pontos;
 }
 
 @keyframes moving {
