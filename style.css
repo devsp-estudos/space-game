@@ -36,6 +36,26 @@
     animation-delay: 8s;
 }
 
+.moedas {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: yellow;
+    -webkit-appearance: none;
+    appearance: none;
+    animation-name: moving;
+    left: var(--left);
+    animation-duration: var(--duration);
+    animation-iteration-count: var(--iteration);
+    z-index: -1;
+    animation-fill-mode: backwards;
+}
+
+.moedas:checked {
+    visibility: hidden;
+}
+
 @keyframes moving {
     0% {
         top: -25px;
