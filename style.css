@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    cursor: url('images/bob.png'), default;
+    position: relative;
+}
+
+.game {
+    background: url('images/fundo.jpg');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
