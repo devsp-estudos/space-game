@@ -22,10 +22,10 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    left: var(--left);
     position: absolute;
     background-color: white;
     animation-name: moving;
+    left: var(--left);
     animation-duration: var(--duration);
     animation-iteration-count: var(--iteration);
     z-index: -1;
@@ -48,4 +48,28 @@
         z-index: 2;
         top: calc(100% - 25px);
     }
+}
+
+.game-over {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 10;
+    color: white;
+    font-size: 99px;
+    opacity: .8;
+}
+
+.inimigo:hover~.game-over {
+    display: flex;
+}
+
+.game-over:hover {
+    display: flex;
 }
