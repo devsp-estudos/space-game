@@ -1,15 +1,60 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     cursor: url('images/bob.png'), default;
     font-family: Audiowide;
+    color: white;
+}
+
+body {
+    margin: 0;
 }
 
 .container {
     width: 100vw;
     height: 100vh;
     position: relative;
+}
+
+/* ----------------------- Pages Info ----------------------- */
+
+.none {
+    position: absolute;
+    top: -20px;
+}
+
+.pagina-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .9);
+    z-index: 7;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+label[for="intro"], label[for="rules"] {
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: purple;
+    border-radius: 5px;
+    margin: 1em 25%;
+    display: inline-block;
+    border: 1px solid purple;
+    transition: background-color 400ms ease;
+}
+
+label[for="intro"]:hover, label[for="rules"]:hover {
+    color: purple;
+    background-color: white;
+}
+
+#intro:checked~.intro {
+    display: none;
 }
 
 /* ----------------------- GAME ----------------------- */
@@ -22,16 +67,15 @@
     counter-reset: pontos;
 }
 
-.game::before {
+.game::after {
     content: counter(pontos) '/5';
     font-size: 1.9rem;
-    color: white;
     position: absolute;
     right: 45px;
     top: 8px;
 }
 
-.game::after {
+.game::before {
     content: '';
     width: 20px;
     height: 20px;
@@ -92,7 +136,7 @@
     animation-delay: 8s;
 }
 
-/* ----------------------- Inimigos ----------------------- */
+/* ----------------------- Moedas ----------------------- */
 
 .moedas {
     width: 20px;
@@ -121,7 +165,7 @@
 
 @keyframes moving {
     0% {
-        top: -25px;
+        top: 0;
         z-index: -1;
     }
     1% {
@@ -146,7 +190,6 @@
     height: 100%;
     background-color: var(--cor);
     z-index: 3;
-    color: white;
     font-size: 99px;
 }
 
