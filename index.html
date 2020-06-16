@@ -12,11 +12,24 @@
 <body>
     <div class="container">
         <input id="intro" type="checkbox" class="none">
+        <input id="rules" type="checkbox" class="none">
 
-        <section style="--cor: red;" class="intro pagina-info">
+        <section style="--z: 11; --color: black" class="intro pagina-info">
             <h1>Space Game</h1>
             <p>Um Jogo feito só com CSS, sem JavaScript ;D</p>
             <label for="intro">PLAY</label>
+        </section>
+
+        <section style="--z: 10; --color: rgba(0,0,0,.6)" class="rules pagina-info">
+            <div>
+                <h3>Regras</h3>
+                <ul>
+                    <li>Mova seu personagem com o mouse</li>
+                    <li>Clique nas moedas para coletá-las</li>
+                    <li>Fuja dos tiros</li>
+                </ul>
+                <label for="rules">Entendi :)</label>
+            </div>
         </section>
 
         <main class="game">
