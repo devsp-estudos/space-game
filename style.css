@@ -151,12 +151,10 @@ label[for="intro"]:hover, label[for="rules"]:hover {
     border-radius: 50%;
     position: absolute;
     background-color: white;
-    animation-name: moving;
+    z-index: -1;
     left: var(--left);
     animation-duration: var(--duration);
     animation-iteration-count: var(--iteration);
-    z-index: -1;
-    animation-fill-mode: backwards;
 }
 
 .delay {
@@ -175,12 +173,10 @@ label[for="intro"]:hover, label[for="rules"]:hover {
     -webkit-appearance: none;
     outline: none;
     appearance: none;
-    animation-name: moving;
+    z-index: -1;
     left: var(--left);
     animation-duration: var(--duration);
     animation-iteration-count: var(--iteration);
-    z-index: -1;
-    animation-fill-mode: backwards;
 }
 
 .moedas:checked {
@@ -204,6 +200,11 @@ label[for="intro"]:hover, label[for="rules"]:hover {
     }
 }
 
+.game:hover>.moedas, .game:hover>.inimigo {
+    animation-name: moving;
+    animation-fill-mode: backwards;
+}
+
 /* ----------------------- Pagina Modal ----------------------- */
 
 .pagina-base {
@@ -217,7 +218,7 @@ label[for="intro"]:hover, label[for="rules"]:hover {
     height: 100%;
     background-color: var(--cor);
     z-index: 4;
-    font-size: 99px;
+    font-size: 4rem;
 }
 
 /* ----------------------- Pagina Game Over ----------------------- */
