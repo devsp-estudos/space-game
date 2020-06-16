@@ -81,7 +81,7 @@
     }
 }
 
-.game-over {
+.pagina-base {
     display: none;
     align-items: center;
     justify-content: center;
@@ -90,17 +90,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: var(--cor);
     z-index: 10;
     color: white;
     font-size: 99px;
     opacity: .8;
 }
 
-.inimigo:hover~.game-over {
+.inimigo:hover~#game-over {
     display: flex;
 }
 
-.game-over:hover {
+#game-over:hover {
+    display: flex;
+}
+
+#c1:checked~#c2:checked~#c3:checked~#c4:checked~#c5:checked~#venceu {
     display: flex;
 }
